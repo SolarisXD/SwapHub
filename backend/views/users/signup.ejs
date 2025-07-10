@@ -1,0 +1,23 @@
+<%layout("/boilerplate/bolier.ejs")%>
+<body>
+    <div class="signup-container">
+        <h1>Create Account</h1>
+        <img src="/images/swaphub2.jpg" alt="Logo">
+        <form action="/signup" method="post">
+            <div class="input-field">
+                <input type="text" placeholder="Full Name" name="username" required>
+            </div>
+            <div class="input-field">
+                <input type="email" placeholder="Email" name="email" required>
+            </div>
+            <div class="input-field">
+                <input type="password" placeholder="Password" name="password" required>
+            </div>
+            <button type="submit" class="signup-btn">SIGN UP</button>
+        </form>
+        <div class="login-link">
+            Already have an account? <a href="/login">Login</a>
+        </div>
+    </div>
+</body>
+
