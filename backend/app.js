@@ -32,7 +32,7 @@ app.use(cors({
 
 // Database Connection
 const createDB = async () => {
-    await mongoose.connect("mongodb+srv://swaphub:<swaphubxmdb>@swaphubv1.jb3p9fe.mongodb.net/?retryWrites=true&w=majority&appName=SwapHubv1");
+    await mongoose.connect("mongodb+srv://swaphub:swaphubxmdb@swaphubv1.jb3p9fe.mongodb.net/?retryWrites=true&w=majority&appName=SwapHubv1");
 };
 
 createDB()
