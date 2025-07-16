@@ -25,7 +25,7 @@ app.use(express.static(path.join(__dirname, "/public")));
 
 // CORS setup
 app.use(cors({
-    origin: "https://swaphubx.vercel.app/", // Replace with your frontend URL
+    origin: ["http://localhost:5173","https://swaphubx.vercel.app/"], // Replace with your frontend URL
     methods: ["GET", "POST"],  // Allow these methods
     allowedHeaders: ["Content-Type"], // Allow these headers
 }));
