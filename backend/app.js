@@ -28,6 +28,7 @@ app.use(cors({
     origin: ["http://localhost:5173","https://swaphubx.vercel.app/"], // Replace with your frontend URL
     methods: ["GET", "POST"],  // Allow these methods
     allowedHeaders: ["Content-Type"], // Allow these headers
+    credentials: true // Allow credentials (cookies, authorization headers, etc.)
 }));
 
 // Database Connection
