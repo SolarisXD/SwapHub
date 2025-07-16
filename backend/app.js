@@ -25,14 +25,14 @@ app.use(express.static(path.join(__dirname, "/public")));
 
 // CORS setup
 app.use(cors({
-    origin: "http://localhost:5173", // Frontend origin (React is running on port 5173)
+    origin: "https://swaphubx.vercel.app/", // Replace with your frontend URL
     methods: ["GET", "POST"],  // Allow these methods
     allowedHeaders: ["Content-Type"], // Allow these headers
 }));
 
 // Database Connection
 const createDB = async () => {
-    await mongoose.connect("mongodb://127.0.0.1/SwapHub");
+    await mongoose.connect("***REMOVED***");
 };
 
 createDB()
