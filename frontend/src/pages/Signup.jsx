@@ -1,4 +1,41 @@
+import { useState } from "react";
+
 export default function Signup() {
+  const [formData, setFormData] = useState({
+    username: "",
+    email: "",
+    password: "",
+    block: "" // Optional: add a field if you're using it
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const res = await fetch("https://swaphub-backend.onrender.com/signup", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(formData),
+        credentials: "include"
+      });
+
+      if (res.ok) {
+        alert("✅ Signup successful!");
+        window.location.href = "/login";
+      } else {
+        const error = await res.json();
+        alert("❌ Signup failed: " + (error.message || "Unknown error"));
+      }
+    } catch (err) {
+      alert("❌ Network error");
+      console.error(err);
+    }
+  };  
     return (
       <div className="flex justify-center items-center h-screen bg-gray-100">
         <div className="w-[900px] h-[450px] bg-white rounded-xl shadow-md flex">
