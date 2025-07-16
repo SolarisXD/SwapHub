@@ -5,6 +5,7 @@ import path from "path";
 import { fileURLToPath } from "url";
 import { Strategy as LocalStrategy } from "passport-local"; 
 import product from "./models/product.js";
+import productRoutes from "./Routes/product.js";
 import User from "./models/user.js";
 import passport from "passport";
 import session from "express-session";
@@ -63,6 +64,9 @@ app.use(passport.session());
 passport.use(new LocalStrategy(User.authenticate())); 
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
+
+// API Routes
+app.use("/products", productRoutes);
 
 // Port Listening
 app.listen(8080, () => {
