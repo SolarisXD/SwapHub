@@ -151,7 +151,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📬 Contact
 
-Project Link: [https://github.com/yourusername/swaphub](https://github.com/yourusername/swaphub)
+Project Link: [SwapHub](https://github.com/SolarisXD/SwapHub)
 
 ## 🙏 Acknowledgements
 
