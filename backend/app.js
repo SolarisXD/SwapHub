@@ -11,6 +11,8 @@ import passport from "passport";
 import session from "express-session";
 import cookieParser from "cookie-parser";
 import cors from "cors";  // Import the CORS package
+import dotenv from "dotenv";
+dotenv.config();
 
 const app = express();
 const __filename = fileURLToPath(import.meta.url);
@@ -33,7 +35,8 @@ app.use(cors({
 
 // Database Connection
 const createDB = async () => {
-    await mongoose.connect("***REMOVED***");
+
+    await mongoose.connect(process.env.MONGODB_URI);
 };
 
 createDB()
@@ -47,7 +50,7 @@ createDB()
 // Login Session
 app.use(
     session({
-        secret: "***REMOVED***",
+        secret: process.env.SECRET_KEY,
         resave: false,
         saveUninitialized: true,
         cookie: {
