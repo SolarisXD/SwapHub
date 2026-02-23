@@ -4,7 +4,7 @@
 
 SwapHub is a comprehensive college platform designed specifically for students to buy, sell, donate, and rent items within their campus community. This platform streamlines the exchange of goods among students, promoting sustainability and resource sharing.
 
-![SwapHub Platform](swaphub.png)
+![SwapHub Platform](images/swaphub-home.png)
 
 ## 🎯 Overview
 
@@ -14,7 +14,7 @@ SwapHub connects students within the same college ecosystem, allowing them to:
 - Rent items temporarily for short-term use
 - Build a trusted community through ratings and reviews
 
-![SwapHub Features](swaphub1.png)
+![SwapHub Features](images/swaphub-buy.png)
 
 ## 🛠️ Technology Stack
 
@@ -69,41 +69,44 @@ SwapHub connects students within the same college ecosystem, allowing them to:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/swaphub.git
+   git clone https://github.com/SolarisXD/swaphub.git
    cd swaphub
    ```
 
 2. Install dependencies for both backend and frontend:
    ```bash
    # Install backend dependencies
-   cd server
+   cd backend
    npm install
 
    # Install frontend dependencies
-   cd ../client
+   cd ../frontend
    npm install
    ```
 
+
 3. Configure environment variables:
-   - Create a `.env` file in the server directory
-   - Add the following variables:
+   - Copy the example file and rename it:
+     ```bash
+     cp .env.example .env
      ```
-     PORT=5000
+   - Edit `.env` in the backend directory and fill in the following variables:
+     ```env
      MONGODB_URI=your_mongodb_connection_string
-     GOOGLE_CLIENT_ID=your_google_client_id
-     GOOGLE_CLIENT_SECRET=your_google_client_secret
-     SESSION_SECRET=your_session_secret
+     SECRET_KEY=your_secret_key
      ```
 
-4. Start the development environment:
+4. Place any shared images in the `images/` folder as needed.
+
+5. Start the development environment:
    ```bash
    # Start backend server
-   cd server
+   cd backend
    npm run dev
 
    # Start frontend server in a new terminal
-   cd client
-   npm start
+   cd ../frontend
+   npm run dev
    ```
 
 ## 🚀 Usage
@@ -160,3 +163,9 @@ Project Link: [SwapHub](https://github.com/SolarisXD/SwapHub)
 - [React.js](https://reactjs.org/)
 - [Node.js](https://nodejs.org/)
 - [Passport.js](http://www.passportjs.org/)
+
+---
+**Note:**
+- The `images/` folder is for shared assets used across the project.
+- The `.env.example` file provides a template for required environment variables. Copy it to `.env` in the root directory and update values as needed.
+- `POST /api/listings` - Create new listing
