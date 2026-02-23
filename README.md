@@ -1,4 +1,5 @@
 
+<img src="frontend/public/assets/icons/logo.png" alt="SwapHub Logo" width="32" height="32" style="vertical-align:middle; margin-right:8px;"/>
 # SwapHub
 
 ** Check Out Live Site:** [https://swaphubx.vercel.app](https://swaphubx.vercel.app)
