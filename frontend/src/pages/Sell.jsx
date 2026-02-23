@@ -3,12 +3,18 @@ import SellForm from "../components/SellForm";
 
 const Sell = () => {
   return (
-    <div
-      className="min-h-screen flex items-center justify-center bg-cover bg-center"
-      style={{ backgroundImage: "url('/assets/icons/sell.png')" }} // Ensure the correct path
-    >
-      <div className="bg-white bg-opacity-90 p-8 rounded-lg shadow-lg w-full max-w-4xl">
-        <SellForm />
+    <div className="min-h-screen bg-transparent">
+      <div className="container py-12">
+        <div className="max-w-5xl mx-auto space-y-4">
+          <div className="flex flex-col gap-2">
+            <p className="text-sm text-gray-500">List an item</p>
+            <h1 className="text-3xl font-bold text-slate-900">Sell or rent your item in minutes</h1>
+            <p className="text-gray-600 max-w-2xl">
+              Add photos, set your price, and choose whether you want to sell or rent. We will surface it to people near you first.
+            </p>
+          </div>
+          <SellForm />
+        </div>
       </div>
     </div>
   );

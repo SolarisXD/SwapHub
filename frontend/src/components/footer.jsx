@@ -1,53 +1,67 @@
 import { Link } from "react-router-dom";
+import { FiTwitter, FiInstagram, FiLinkedin } from "react-icons/fi";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-gray-300 py-16 w-full mt-auto">
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
-        <div>
-          <h4 className="text-white text-lg font-medium mb-4 relative after:block after:w-12 after:h-1 after:bg-pink-500 after:mt-2">Company</h4>
-          <ul>
-            <li><Link to="/about" className="hover:text-white transition">About Us</Link></li>
-            <li><a href="#" className="hover:text-white transition">Services</a></li>
-            <li><a href="#" className="hover:text-white transition">Privacy Policy</a></li>
-            <li><a href="#" className="hover:text-white transition">Affiliate Program</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 className="text-white text-lg font-medium mb-4 relative after:block after:w-12 after:h-1 after:bg-pink-500 after:mt-2">Get Help</h4>
-          <ul>
-            <li><a href="#" className="hover:text-white transition">FAQ</a></li>
-            <li><a href="#" className="hover:text-white transition">Contact Us</a></li>
-            <li><a href="#" className="hover:text-white transition">Bus Status</a></li>
-            <li><a href="#" className="hover:text-white transition">Payment Options</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 className="text-white text-lg font-medium mb-4 relative after:block after:w-12 after:h-1 after:bg-pink-500 after:mt-2">Rides</h4>
-          <ul>
-            <li><a href="#" className="hover:text-white transition">Trips</a></li>
-            <li><a href="#" className="hover:text-white transition">Luxury Rides</a></li>
-            <li><a href="#" className="hover:text-white transition">Visit Cities</a></li>
-            <li><a href="#" className="hover:text-white transition">Best Rides</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 className="text-white text-lg font-medium mb-4 relative after:block after:w-12 after:h-1 after:bg-pink-500 after:mt-2">Follow Us</h4>
-          <div className="flex space-x-4">
-            <a href="#" className="w-10 h-10 flex items-center justify-center bg-white bg-opacity-20 rounded-full text-white hover:bg-white hover:text-gray-900 transition">
-              <i className="fab fa-facebook-f"></i>
-            </a>
-            <a href="#" className="w-10 h-10 flex items-center justify-center bg-white bg-opacity-20 rounded-full text-white hover:bg-white hover:text-gray-900 transition">
-              <i className="fab fa-x-twitter"></i>
-            </a>
-            <a href="#" className="w-10 h-10 flex items-center justify-center bg-white bg-opacity-20 rounded-full text-white hover:bg-white hover:text-gray-900 transition">
-              <i className="fab fa-instagram"></i>
-            </a>
-            <a href="#" className="w-10 h-10 flex items-center justify-center bg-white bg-opacity-20 rounded-full text-white hover:bg-white hover:text-gray-900 transition">
-              <i className="fab fa-linkedin-in"></i>
-            </a>
+    <footer className="bg-slate-900 text-slate-100 mt-auto">
+      <div className="container py-14 grid grid-cols-1 md:grid-cols-4 gap-10">
+        <div className="space-y-3">
+          <div className="flex items-center gap-3">
+            <img src="/assets/icons/logo.png" alt="SwapHub" className="h-10 w-10 rounded-full" />
+            <span className="text-xl font-semibold">SwapHub</span>
+          </div>
+          <p className="text-sm text-slate-300 leading-relaxed">
+            A calmer way to move items between people—buy, rent, donate, or swap within your community.
+          </p>
+          <div className="flex items-center gap-3 text-sm text-slate-400">
+            <span className="tag blue">Secure</span>
+            <span className="tag green">Verified</span>
           </div>
         </div>
+
+        <div className="space-y-3">
+          <h4 className="text-lg font-semibold">Product</h4>
+          <ul className="space-y-2 text-slate-300">
+            <li><Link to="/buy" className="hover:text-white transition">Marketplace</Link></li>
+            <li><Link to="/sell" className="hover:text-white transition">List an Item</Link></li>
+            <li><Link to="/donate" className="hover:text-white transition">Donate</Link></li>
+            <li><Link to="/rent" className="hover:text-white transition">Rent</Link></li>
+          </ul>
+        </div>
+
+        <div className="space-y-3">
+          <h4 className="text-lg font-semibold">Support</h4>
+          <ul className="space-y-2 text-slate-300">
+            <li><Link to="/help" className="hover:text-white transition">Help Center</Link></li>
+            <li><Link to="/faq" className="hover:text-white transition">FAQs</Link></li>
+            <li><Link to="/privacy" className="hover:text-white transition">Privacy & Security</Link></li>
+            <li><Link to="/contact" className="hover:text-white transition">Contact</Link></li>
+          </ul>
+        </div>
+
+        <div className="space-y-4">
+          <h4 className="text-lg font-semibold">Stay updated</h4>
+          <p className="text-sm text-slate-300">Get product drops, local deals, and donation drives.</p>
+          <div className="flex items-center gap-2">
+            <input
+              type="email"
+              placeholder="Your email"
+              className="flex-1 px-4 py-2 rounded-lg bg-white/10 border border-white/20 text-sm placeholder:text-slate-300 focus:outline-none"
+            />
+            <button className="px-4 py-2 rounded-lg bg-orange-500 text-white font-semibold hover:bg-orange-600 transition">
+              Join
+            </button>
+          </div>
+          <div className="flex gap-3 text-slate-300 text-xl">
+            <a href="#" aria-label="Twitter" className="hover:text-white transition"><FiTwitter /></a>
+            <a href="#" aria-label="Instagram" className="hover:text-white transition"><FiInstagram /></a>
+            <a href="#" aria-label="LinkedIn" className="hover:text-white transition"><FiLinkedin /></a>
+          </div>
+        </div>
+      </div>
+
+      <div className="border-t border-white/10 py-6 text-center text-sm text-slate-400">
+        © {new Date().getFullYear()} SwapHub. Built for the community.
       </div>
     </footer>
   );
